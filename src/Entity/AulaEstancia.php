@@ -6,6 +6,7 @@ use App\Repository\AulaEstanciaRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: AulaEstanciaRepository::class)]
+#[ORM\Table(schema: 'public')]
 class AulaEstancia
 {
     #[ORM\Id]
