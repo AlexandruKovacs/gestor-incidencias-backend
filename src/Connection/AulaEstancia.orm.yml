@@ -1,0 +1,24 @@
+App\Entity\AulaEstancia:
+    type: entity
+    table: aulas_estancias
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            generator:
+                strategy: AUTO
+    fields:
+        nombre:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        descripcion:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false

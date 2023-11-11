@@ -16,9 +16,9 @@ doctrine:
         auto_mapping: true
         mappings:
             App:
-                is_bundle: false
                 type: yml
-                dir: '%kernel.project_dir%/src/Entity'
+                is_bundle: false
+                dir: '%kernel.project_dir%/src/Connection'
                 prefix: 'App\Entity'
                 alias: App
 
