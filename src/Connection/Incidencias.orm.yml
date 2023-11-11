@@ -1,0 +1,68 @@
+App\Entity\Incidencias:
+    type: entity
+    table: incidencias
+    indexes:
+        fk_incidencias_profesores1_idx:
+            columns:
+                - id_profesor
+        fk_incidencias_aulas_estancias1_idx:
+            columns:
+                - id_aula
+        fk_incidencias_grupos1_idx:
+            columns:
+                - id_grupo
+        fk_incidencias_tipos_incidencias1_idx:
+            columns:
+                - tipo_incidencia
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            generator:
+                strategy: AUTO
+    fields:
+        descripcion:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        fecha_creacion:
+            type: datetime
+            nullable: true
+            options:
+                default: 'CURRENT_TIMESTAMP'
+        estado:
+            type: text
+            nullable: false
+            options:
+                fixed: false
+        comentarios:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+    manyToOne:
+        profesor:
+            targetEntity: Profesores
+            joinColumn:
+                name: id_profesor
+                referencedColumnName: id
+        aula:
+            targetEntity: AulasEstancias
+            joinColumn:
+                name: id_aula
+                referencedColumnName: id
+        grupo:
+            targetEntity: Grupos
+            joinColumn:
+                name: id_grupo
+                referencedColumnName: id
+        tipoIncidencia:
+            targetEntity: TiposIncidencias
+            joinColumn:
+                name: tipo_incidencia
+                referencedColumnName: id
