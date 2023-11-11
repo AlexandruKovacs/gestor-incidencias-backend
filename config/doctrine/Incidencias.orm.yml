@@ -1,0 +1,92 @@
+App\Entity\Incidencias:
+    type: entity
+    table: incidencias
+    indexes:
+        fk_incidencias_tipos_incidencias1_idx:
+            columns:
+                - tipo_incidencia
+        fk_incidencias_grupos1_idx:
+            columns:
+                - id_grupo
+        fk_incidencias_aulas_estancias1_idx:
+            columns:
+                - id_aula
+        fk_incidencias_profesores1_idx:
+            columns:
+                - id_profesor
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        descripcion:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        fechaCreacion:
+            type: datetime
+            nullable: true
+            options:
+                default: CURRENT_TIMESTAMP
+            column: fecha_creacion
+        estado:
+            type: text
+            nullable: false
+            length: null
+            options:
+                fixed: false
+        comentarios:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+    manyToOne:
+        idProfesor:
+            targetEntity: Profesores
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_profesor:
+                    referencedColumnName: id
+            orphanRemoval: false
+        idAula:
+            targetEntity: AulasEstancias
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_aula:
+                    referencedColumnName: id
+            orphanRemoval: false
+        idGrupo:
+            targetEntity: Grupos
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_grupo:
+                    referencedColumnName: id
+            orphanRemoval: false
+        tipoIncidencia:
+            targetEntity: TiposIncidencias
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                tipo_incidencia:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }
