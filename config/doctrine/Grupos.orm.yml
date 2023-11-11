@@ -1,6 +1,6 @@
-App\Entity\AulasEstancias:
+App\Entity\Grupos:
     type: entity
-    table: aulas_estancias
+    table: grupos
     id:
         id:
             type: integer

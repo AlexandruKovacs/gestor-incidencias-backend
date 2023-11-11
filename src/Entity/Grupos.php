@@ -2,7 +2,7 @@
 
 namespace App\Entity;
 
-class Departamentos
+class Grupos
 {
     private ?int $id = null;
 

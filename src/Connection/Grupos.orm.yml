@@ -1,6 +1,6 @@
-App\Entity\Departamentos:
+App\Entity\Grupos:
     type: entity
-    table: departamentos
+    table: grupos
     id:
         id:
             type: integer

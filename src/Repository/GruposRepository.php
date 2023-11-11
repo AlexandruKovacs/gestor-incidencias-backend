@@ -2,27 +2,27 @@
 
 namespace App\Repository;
 
-use App\Entity\AulasEstancias;
+use App\Entity\Grupos;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<AulasEstancias>
+ * @extends ServiceEntityRepository<Grupos>
  *
- * @method AulasEstancias|null find($id, $lockMode = null, $lockVersion = null)
- * @method AulasEstancias|null findOneBy(array $criteria, array $orderBy = null)
- * @method AulasEstancias[]    findAll()
- * @method AulasEstancias[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Grupos|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Grupos|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Grupos[]    findAll()
+ * @method Grupos[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class AulasEstanciasRepository extends ServiceEntityRepository
+class GruposRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, AulasEstancias::class);
+        parent::__construct($registry, Grupos::class);
     }
 
 //    /**
-//     * @return AulasEstancias[] Returns an array of AulasEstancias objects
+//     * @return Grupos[] Returns an array of Grupos objects
 //     */
 //    public function findByExampleField($value): array
 //    {
@@ -36,7 +36,7 @@ class AulasEstanciasRepository extends ServiceEntityRepository
 //        ;
 //    }
 
-//    public function findOneBySomeField($value): ?AulasEstancias
+//    public function findOneBySomeField($value): ?Grupos
 //    {
 //        return $this->createQueryBuilder('a')
 //            ->andWhere('a.exampleField = :val')

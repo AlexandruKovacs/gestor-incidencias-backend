@@ -10,8 +10,6 @@ class AulasEstancias
 
     private ?string $descripcion = null;
 
-    private ?string $categoria = null;
-
     public function getId(): ?int
     {
         return $this->id;
@@ -34,21 +32,9 @@ class AulasEstancias
         return $this->descripcion;
     }
 
-    public function setDescripcion(string $descripcion): static
+    public function setDescripcion(?string $descripcion): static
     {
         $this->descripcion = $descripcion;
-
-        return $this;
-    }
-
-    public function getCategoria(): ?string
-    {
-        return $this->categoria;
-    }
-
-    public function setCategoria(string $categoria): static
-    {
-        $this->categoria = $categoria;
 
         return $this;
     }
