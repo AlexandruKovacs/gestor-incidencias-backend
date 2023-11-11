@@ -1,0 +1,53 @@
+App\Entity\Profesores:
+    type: entity
+    table: profesores
+    indexes:
+        fk_profesores_departamentos1_idx:
+            columns:
+                - id_departamento
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            generator:
+                strategy: AUTO
+    fields:
+        nombre:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        apellidos:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        usuario:
+            type: string
+            nullable: false
+            length: 200
+            options:
+                fixed: false
+        password:
+            type: string
+            nullable: false
+            length: 200
+            options:
+                fixed: false
+        correo:
+            type: string
+            nullable: false
+            length: 200
+            options:
+                fixed: false
+    manyToOne:
+        departamento:
+            targetEntity: Departamentos
+            joinColumn:
+                name: id_departamento
+                nullable: false
+                referencedColumnName: id
