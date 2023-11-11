@@ -1,0 +1,32 @@
+App\Entity\AulasEstancias:
+    type: entity
+    table: aulas_estancias
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        nombre:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        descripcion:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        categoria:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }

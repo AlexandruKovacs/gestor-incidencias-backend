@@ -2,7 +2,7 @@
 
 namespace App\Repository;
 
-use App\Entity\AulaEstancia;
+use App\Entity\AulasEstancias;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -14,7 +14,7 @@ use Doctrine\Persistence\ManagerRegistry;
  * @method AulaEstancia[]    findAll()
  * @method AulaEstancia[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class AulaEstanciaRepository extends ServiceEntityRepository
+class AulasEstanciasRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {

@@ -2,13 +2,15 @@
 
 namespace App\Entity;
 
-class AulaEstancia
+class AulasEstancias
 {
     private ?int $id = null;
 
     private ?string $nombre = null;
 
     private ?string $descripcion = null;
+
+    private ?string $categoria = null;
 
     public function getId(): ?int
     {
@@ -35,6 +37,18 @@ class AulaEstancia
     public function setDescripcion(string $descripcion): static
     {
         $this->descripcion = $descripcion;
+
+        return $this;
+    }
+
+    public function getCategoria(): ?string
+    {
+        return $this->categoria;
+    }
+
+    public function setCategoria(string $categoria): static
+    {
+        $this->categoria = $categoria;
 
         return $this;
     }
