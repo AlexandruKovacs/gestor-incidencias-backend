@@ -1,4 +1,4 @@
-AulaEstancia:
+App/Entity/AulaEstancia:
     type: entity
     table: aulas_estancias
     id:
